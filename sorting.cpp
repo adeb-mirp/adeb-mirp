@@ -11,10 +11,11 @@ int main(){
     }
     for(int j=1;j<n;j++){        
 	for(int l=0;l<(n-j);l++){
-	    if(arr[l]>arr[l+1])
-	    temp=arr[l];
-	    arr[l]=arr[l+1];
-	    arr[l+1]=temp;
+	    if(arr[l]>arr[(l+1)]){
+	    	temp=arr[l];
+	    arr[l]=arr[(l+1)];
+	    arr[(l+1)]=temp;
+		}
 	}
     }
     cout<<"The numbers in ascending order are"<<endl;
