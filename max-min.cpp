@@ -10,10 +10,11 @@ int main(){
 		cin>>number;
 		if(number>max)
 			max=number;
-		else if(number<min){
+		if(number<min)
 			min=number;
-		}
 	}
 	cout<<"Max is="<<max<<endl;
 	cout<<"Min is="<<min<<endl;
+	return 0;	
 }
+
