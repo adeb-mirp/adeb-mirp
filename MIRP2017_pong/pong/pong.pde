@@ -13,8 +13,6 @@ void draw() {
 void drawGameScreen() {
   if(reset)
   resetGame();
-  if(pause)
-  pauseGame();
   background(bgColor);
   drawBall();
   updateBallPosition();
@@ -65,17 +63,4 @@ void displayScores() {
   text(leftScore,100,200);
   text(rightScore,700,200);
   // Display Left and Right player Scores
-}
-void pauseGame(){
-  float x=ballVx;
-  float y=ballVy;
-  float p=PADDLE_VELOCITY;
-  ballVx=0;
-  ballVy=0;
-  PADDLE_VELOCITY=0;
-   if(start){
-  ballVx=x;
-  ballVy=y;
-  PADDLE_VELOCITY=p;
-  }
 }
