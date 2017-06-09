@@ -55,6 +55,7 @@ void resetGame(){
   leftPaddleX=0; 
   rightPaddleX=(displayWidth-paddleWidth);
   ballVx=BALL_VELOCITY; 
+  ballVy=0;
   // Reset Ball and Paddle Positions
   // Reset Ball Velocity
 }

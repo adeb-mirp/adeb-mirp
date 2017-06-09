@@ -5,7 +5,7 @@ void keyPressed() {
   if (key == RIGHT_DOWN)    right_down = true;
   if (key == RESET)         reset = true;
   if (key == PAUSE)         pause = true;
-  if (key == START)         start = true;
+  if (key == START)         pause = false;
 }
 
 void keyReleased() {
