@@ -19,7 +19,7 @@ float dragCoeff = 0.03;
 color bgColor = color(255,253,231);
 
 // Player Parameters
-float playerX, playerY;
+float playerX=displayWidth/2,playerY=displayHeight;
 float playerVx=0, playerVy=3;
 float playerRadius = 20;
 color playerColor = color(179,157,219);

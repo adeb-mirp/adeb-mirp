@@ -3,17 +3,21 @@ void setup() {
   background(bgColor);
   resetGame();
   textFont(createFont("Arial Bold", 50));
-  /*playerX=displayWidth/2;
-  playerY=displayHeight;*/
+  playerX=displayWidth/2;
+  playerY=displayHeight/2;
+  playerVx=0;
+  playerVy=0;
+  
 }
 
 void draw() {
   background(bgColor);
   drawPlayer();
-  updatePlayerPosition();
 }
 
 void drawStartScreen() {
+  updatePlayerPosition();
+  updatePlayerVelocity();
 }
 
 void drawLoseScreen() {
