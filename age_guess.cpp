@@ -13,6 +13,6 @@ max=mid;
 else
 min=mid;
 }
-cout<<"Age is=:"<<min<<endl;
+cout<<"Age is="<<min<<endl;
 return 0;
 }
