@@ -10,9 +10,9 @@ int main(){
 	cin>>x1>>y1;
 	cout<<"Enter coordinates of 3rd point"<<endl;
 	cin>>x2>>y2;
-	AB=sqrt(((x-x1)^2)+((y-y1)^2));
-	BC=sqrt(((x1-x2)^2)+((y1-y2)^2));
-	CA=sqrt(((x2-x)^2)+((y2-y)^2));
+	AB=sqrt(((x-x1)*(x-x1))+((y-y1)*(y-y1)));
+	BC=sqrt(((x-x2)*(x-x2))+((y-y2)*(y-y2)));
+	CA=sqrt(((x1-x2)*(x1-x2))+((y1-y2)*(y1-y2)));
 	if((AB==BC)&&(BC==CA))
 	cout<<"Equilateral"<<endl;
 	else if(((AB!=BC)&&(BC!=CA))&&(CA!=AB))
@@ -20,5 +20,4 @@ int main(){
 	else 
 	cout<<"Isosceles"<<endl;
 	return 0;
-}
-	
+}	
