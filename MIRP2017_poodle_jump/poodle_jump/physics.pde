@@ -1,5 +1,6 @@
 void updatePlayerVelocity() {
   playerVy+=gravity;
+  playerVy-=dragCoeff;
   // Update Player Velocities according to keys pressed
   // Apply Gravity and Air Drag
 }
@@ -17,6 +18,10 @@ void updatePositions() {
 }
 
 void resolveCollisions() {
-  // Collisionsonly happen when the player is falling
+  if(playerY>(displayHeight-playerRadius)){
+    playerY=(displayHeight-playerRadius);
+    playerVy*=-restitutionCoeff;
+  }
+  // Collisions only happen when the player is falling
   // If Player lands on a platform, bounce off with PLAYER_VERT_VELOCITY
 }

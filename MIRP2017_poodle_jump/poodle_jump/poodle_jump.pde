@@ -4,7 +4,7 @@ void setup() {
   resetGame();
   textFont(createFont("Arial Bold", 50));
   playerX=displayWidth/2;
-  playerY=displayHeight/2;
+  playerY=displayHeight-displayHeight/3;
   playerVx=0;
   playerVy=0;
   
@@ -13,11 +13,13 @@ void setup() {
 void draw() {
   background(bgColor);
   drawPlayer();
+  drawStartScreen();
 }
 
 void drawStartScreen() {
   updatePlayerPosition();
   updatePlayerVelocity();
+  resolveCollisions();
 }
 
 void drawLoseScreen() {
@@ -35,8 +37,6 @@ void drawPlatforms() {
 }
 
 void resetGame(){
-  playerVx=3;
-  playerVy=3;
   // Initialize Player Position and Velocity
   initializePlatforms();
 }
