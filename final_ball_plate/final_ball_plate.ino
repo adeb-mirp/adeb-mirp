@@ -8,7 +8,7 @@ int yP=A0,yM=A2,xP=A1,xM=A3;  //P=(+), M=(-)
 double InputY,InputX,OutputY,OutputX,SetpointX=517,SetpointY=561;
 int yServoPin=2,xServoPin=3;
 int mn=60,mx=120;
-double Ki=0.01,Kd=0.04,Kp=0.04;
+double Ki=0.02,Kd=0.03,Kp=0.03;
 
 TouchScreen ts = TouchScreen(xP,yP,xM,yM,711);
 
@@ -45,11 +45,11 @@ void loop() {
   
       InputX=p.x;
       InputY=p.y;
-//      Serial.print("x=");
-//      Serial.print(InputX);
-//      Serial.print("\t");
-//      Serial.print("y=");
-//      Serial.println(InputY);
+      Serial.print("x=");
+      Serial.print(InputX);
+      Serial.print("\t");
+      Serial.print("y=");
+      Serial.println(InputY);
       xpid.Compute();
       ypid.Compute();
 
